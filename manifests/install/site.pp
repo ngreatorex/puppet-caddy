@@ -11,7 +11,7 @@ class caddy::install::site {
   $query_params = {
     os        => 'linux',
     arch      => $caddy::arch,
-    plugins   => $caddy::caddy_features,
+    p         => $caddy::caddy_features,
     license   => $caddy::caddy_license,
     telemetry => $caddy::caddy_telemetry,
   }.map |$k, $v| { "${k}=${v}" }.join('&')
